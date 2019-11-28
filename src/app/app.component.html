@@ -1,1 +1,3 @@
 <app-title [headingTitle]="heading"></app-title>
+<div class="timer">{{ timeLeft }}</div>
+<app-message [ngClass]="{'red': !changeColor, 'green': changeColor}" [messageTitle]="changeText"></app-message>
