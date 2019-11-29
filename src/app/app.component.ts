@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,20 +10,14 @@ export class AppComponent {
   timer: any;
   timeLeft: number = 10;
   changeColor: boolean = true;
-  changeText: string = 'Timer Works!!'
+  changeText: string = 'Timer Works!!';
+  @Input() titleChange;
 
   ngOnInit() {
-    
-    
-    // this.check();
-    this.start()
+    this.start();
+    // console.log(this.titleChange);
   }
-  // check() {
-  //   if(this.timeLeft = 0) {
-  //     alert(1)
-  //       this.changeColor = !this.changeColor;
-  //     }
-  // }
+
   start() {
     this.timer = setInterval(() => {
       if(this.timeLeft > 0) {
