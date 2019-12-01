@@ -1,4 +1,4 @@
-<app-title [headingTitle]="heading" [messageTitle]="changeText"></app-title>
+<app-title [headingTitle]="heading" ng-change="onTitleChange()"></app-title>
 <div class="timer">{{ timeLeft }}</div>
-<app-message [ngClass]="{'red': !changeColor, 'green': changeColor}" [messageTitle]="changeText"></app-message>
-<app-new-message [titleChange]="changed"  *ngIf="changed"></app-new-message>
+<app-message [ngClass]="{'red': !changeColor, 'green': changeColor}" [messageTitle]="changeText" [timerZero]="timeLeft" [changed]="changeColor" [(stoperTimer)]="timestop"></app-message>
+<app-new-message *ngIf="timestop"></app-new-message>

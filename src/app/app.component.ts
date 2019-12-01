@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +11,12 @@ export class AppComponent {
   timeLeft: number = 10;
   changeColor: boolean = true;
   changeText: string = 'Timer Works!!';
-  @Input() titleChange;
+  timestop: boolean;
+  
 
   ngOnInit() {
     this.start();
-    // console.log(this.titleChange);
+    console.log(this.timestop)
   }
 
   start() {
