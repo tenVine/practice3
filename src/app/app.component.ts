@@ -6,17 +6,19 @@ import { Component, Input, Output } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  timer;
   heading: string = 'Practice3.1';
-  timer: any;
   timeLeft: number = 10;
   changeColor: boolean = true;
   changeText: string = 'Timer Works!!';
-  timestop: boolean;
+  changedTitle: boolean =false;
   
-
   ngOnInit() {
     this.start();
-    console.log(this.timestop)
+  }
+
+  onTitleChange(messageTitle: string) {
+    messageTitle == 'Timer Stoped' ? this.changedTitle = true: this.changedTitle = false;
   }
 
   start() {
@@ -33,8 +35,6 @@ export class AppComponent {
   
   pause() {
       clearInterval(this.timer);
-    
   }
-
   
 }

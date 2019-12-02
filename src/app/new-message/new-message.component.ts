@@ -6,11 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./new-message.component.scss']
 })
 export class NewMessageComponent implements OnInit {
-  @Input() changed: boolean;
+    
   constructor() { }
 
   ngOnInit() {
-    console.log(this.changed);
+
   }
 
 }
